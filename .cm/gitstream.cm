@@ -9,6 +9,10 @@ automations:
     if:
       - true
     run:
-      - action: add-reviewers@v1 
+      - action : add-reviewers@v1 
         args:
           reviewers: [shadowshot-x]
+      - action : add-comment@v1
+        args:
+          comment: |
+            Hello {{ repo.blame }} Repo Blame Structure
