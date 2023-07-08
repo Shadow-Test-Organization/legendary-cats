@@ -11,4 +11,4 @@ automations:
     run:
       - action: add-reviewers@v1 
         args:
-          reviewers: {{ repo | codeExperts(lt=100) }} 
+          reviewers: [shadowshot-x]
