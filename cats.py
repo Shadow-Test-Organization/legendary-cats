@@ -1,6 +1,8 @@
 # Legendary Cat Names
 
-print("American Shorthair") # American Shorthair
-print("Persian Cat") # Persian
+# Persian
+# American Shorthair
+print("American Shorthair") 
+print("Persian Cat")
 print("Siamese Cat")
 print("Sphynx Cat")
