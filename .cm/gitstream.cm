@@ -1,18 +1,11 @@
-# -*- mode: yaml -*-
-# This example configuration for provides basic automations to get started with gitStream.
-# View the gitStream quickstart for more examples: https://docs.gitstream.cm/quick-start/
 manifest:
   version: 1.0
+
 automations:
-  # Post a comment that lists the best experts for the files that were modified.
-  code_experts:
+  explain_code_experts:
     if:
       - true
     run:
-      - action : add-reviewers@v1 
+      - action: explain-code-experts@v1 
         args:
-          reviewers: [shadowshot-x]
-      - action : add-comment@v1
-        args:
-          comment: |
-            Hello {{ repo.blame }} Repo Blame Structure
+          gt: 1
