@@ -6,7 +6,7 @@ manifest:
 automations:
   assign_code_experts:
     if: 
-      - true
+      - {{ pr.labels | match(term='Share Knowledge') | some }}
     run:
       - action: add-reviewers@v1
         args:
