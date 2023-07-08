@@ -4,7 +4,7 @@
 # American Shorthair
 # Siamese Cat
 # Sphynx Cat
-# Ragdoll
+# Ragdoll Cat
 
 print("American Shorthair") 
 print("Persian Cat")
