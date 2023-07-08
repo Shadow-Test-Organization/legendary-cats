@@ -5,9 +5,14 @@ manifest:
 
 automations:
   assign_code_experts:
-    if: 
+    if:
       - {{ pr.labels | match(term='Share Knowledge') | some }}
+      - {{ pr.author_teams | match(term='Junior') }}
     run:
       - action: add-reviewers@v1
         args:
-          reviewers: {{ repo | codeExperts(lt=60) }}
+          reviewers: {{ repo | codeExperts(lt=60) | random }}
+      - action: add-comment@v1
+        args:
+          comment: |
+            gitStream has assigned a reviewer to increase knowledge sharing on this PR.
