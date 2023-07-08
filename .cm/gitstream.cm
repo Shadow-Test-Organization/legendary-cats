@@ -21,7 +21,7 @@ automations:
     run:
       - action: explain-code-experts@v1 
         args:
-          gt: 10 
+          lt: 10 
 # The next function calculates the estimated time to review and makes it available in the automation above.
 calc:
   etr: {{ branch | estimatedReviewTime }}
